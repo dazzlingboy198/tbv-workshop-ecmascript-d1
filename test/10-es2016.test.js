@@ -1,10 +1,10 @@
-test.skip('the exponentiation operation can be used to raise a number to a power of another number', () => {
+test('the exponentiation operation can be used to raise a number to a power of another number', () => {
   // refactor this to use the exponentiation operator (**)
-  const result = Math.pow(3, 2)
+  const result = 3**2
   expect(result).toBe(9)
 })
 
-test.skip('array.includes can be used to determine whether an item exists in an array', () => {
+test('array.includes can be used to determine whether an item exists in an array', () => {
   const bestFriend = {
     name: 'Sindre Sorhus'
   }
@@ -21,6 +21,6 @@ test.skip('array.includes can be used to determine whether an item exists in an 
     },
   ]
   // refactor this to use `includes` instead
-  const result = greatFriends.indexOf(bestFriend) !== -1
+  const result = greatFriends.includes(bestFriend) !== -1
   expect(result).toBe(true)
 })

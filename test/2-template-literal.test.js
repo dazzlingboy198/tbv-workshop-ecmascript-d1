@@ -33,7 +33,7 @@ test('should support string interpolation', () => {
   })
   
   // you likely won't often use tagging, but it can be handy!
-  test.skip(`should call the tagging function`, () => {
+  test(`should call the tagging function`, () => {
     const noun = 'World'
     const emotion = 'happy'
     const result = tagIt`Hello ${noun}! Are you feeling ${emotion} today?`
@@ -43,6 +43,6 @@ test('should support string interpolation', () => {
   
     function tagIt(literalString, ...interpolatedParts) {
       // implement this function to make the test pass
-      return 'fixme'
+      return `${literalString[0]}super-cool ${interpolatedParts[0]}${literalString[1]}really ${interpolatedParts[1]}${literalString[2]}`
     }
   })
