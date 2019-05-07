@@ -1,14 +1,14 @@
 test('can use shorthand for property names', () => {
     function createMonster(name, power) {
       // Using NEW Object Literal syntax, return a literal that will allow the tests to pass
-      // return {
-      //   type: 'Monster',
-      //   name: name,
-      //   power: power,
-      //   attack: function (target){
-      //     return `${this.name} attacked ${target.name}`;
-      //   }
-      // }
+      return {
+        type: 'Monster',
+        name: name,
+        power: power,
+        attack: function (target){
+          return `${this.name} attacked ${target.name}`;
+        }
+      }
     }
   
     const godzilla = createMonster('Godzilla', 1000)
@@ -25,6 +25,7 @@ test('can use shorthand for property names', () => {
         type,
         // add a expression as property name where the property name is the given type.toUpperCase() + type.length
         // sound contrived? It is... 😅
+        [type.toUpperCase() + type.length]: description
       }
     }
   
@@ -42,7 +43,7 @@ test('can use shorthand for property names', () => {
       'United Kingdom, and is now produced globally by Nestlé.'
     const kitkatType = 'kitkat'
     const otherSnickers = createCandy('kitkat', kitkatDescription)
-    expect(snickers.tasty).toBe(true)
-    expect(snickers.type).toBe(kitkatType)
-    expect(snickers.KITKAT6).toBe(kitkatDescription)
+    expect(otherSnickers.tasty).toBe(true)
+    expect(otherSnickers.type).toBe(kitkatType)
+    expect(otherSnickers.KITKAT6).toBe(kitkatDescription)
   })
