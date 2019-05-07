@@ -1,11 +1,13 @@
 const noop = () => {}
 test('basic scope understand between `var` vs `let`', () => {
   // Hint: write your code from here
-
+  var bandName = 'Queen'
+  var isBestBand = true
   // Hint: end
   if (true) {
     // Hint: write your code from here
-
+    let bandName = 'King'
+    let isBestBand = false
     // Hint: end
     expect(bandName).toBe('King')
     expect(isBestBand).toBe(false)
@@ -17,7 +19,7 @@ test('basic scope understand between `var` vs `let`', () => {
 test('can modify the value of a `let` variable even in the next block statement', () => {
   let releaseName = 'ES6'
   // Hint: write your code from here
-
+  releaseName = 'ES2015'
   // Hint: end
   expect(releaseName).toBe('ES2015')
 })
